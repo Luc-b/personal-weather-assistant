@@ -217,22 +217,14 @@ Use the interactive API documentation at http://127.0.0.1:8000/docs to test endp
 
 ---
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
----
-
-## License
-
-This project is licensed under the MIT License.
-
----
-
 ## Contact
 
 For questions or feedback, please open an issue on GitHub.
 
 ---
+## Example
+
+<img width="1431" height="871" alt="image" src="https://github.com/user-attachments/assets/57c1f157-673d-4f9d-8edb-3ca0a88f8d5a" />
+
 
 **Built with ❤️ using FastAPI, React, and AI**
