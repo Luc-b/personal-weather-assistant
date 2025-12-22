@@ -40,10 +40,14 @@ Personal Weather Assistant combines real-time weather data from OpenWeatherMap w
 ```
 personal-weather-assistant/
 ├── backend/
-│   ├── main.py
-│   ├── requirements.txt
-│   ├── .env.example
-│   └── .env
+│   └── weather_assistant/
+│       ├── api.py
+│       ├── cli.py
+│       ├── config.py
+│       ├── models.py
+│       ├── requirements.txt
+│       ├── .env.example
+│       └── services/
 └── weather-frontend/
     ├── src/
     ├── package.json
@@ -69,19 +73,26 @@ git clone <repository-url>
 cd personal-weather-assistant
 ```
 
-### 2. Backend Setup
+### Backend Setup
 ```bash
 cd backend
 python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+
+# Windows
+.venv\Scripts\activate
+
+# macOS / Linux
+# source .venv/bin/activate
+
+python -m pip install -r weather_assistant/requirements.txt
+
 ```
 
 ### 3. Configure Environment Variables
 
-Create a `.env` file in the `backend/` directory:
+Create a `.env` file in `backend/weather_assistant/`:
 ```bash
-cp .env.example .env
+cp weather_assistant/.env.example weather_assistant/.env
 ```
 
 Edit `.env` and add your API keys:
@@ -103,8 +114,10 @@ npm install
 ### Start the Backend
 ```bash
 cd backend
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
-uvicorn main:app --reload
+.venv\Scripts\activate   # Windows
+# source .venv/bin/activate  # macOS / Linux
+
+uvicorn weather_assistant.api:app --reload
 ```
 
 Backend will be available at:
@@ -168,7 +181,7 @@ Frontend will be available at: http://localhost:5173
 1. **Start the backend:**
 ```bash
    cd backend
-   uvicorn main:app --reload
+   uvicorn weather_assistant.api:app --reload
 ```
 
 2. **Start the frontend:**
