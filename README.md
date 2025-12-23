@@ -69,7 +69,7 @@ personal-weather-assistant/
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
+git clone Luc-b/personal-weather-assistant
 cd personal-weather-assistant
 ```
 
