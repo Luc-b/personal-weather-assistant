@@ -19,7 +19,7 @@ class OpenWeatherClient:
     GEO_URL = "https://api.openweathermap.org/geo/1.0/direct"
     FORECAST_URL = "https://api.openweathermap.org/data/2.5/forecast"
 
-    def _init_(self, api_key: str, timeout_s: float = 10.0):
+    def __init__(self, api_key: str, timeout_s: float = 10.0):
         self.api_key = api_key
         self.client = httpx.Client(timeout=timeout_s)
 
