@@ -20,7 +20,7 @@ def geocode_cmd(city: str = typer.Option(..., "--city", "-c")):
     geo = ow.geocode(city)
     print(f"City: {geo.name} ({geo.country})")
     print(f"Lat/Lon: {geo.lat}, {geo.lon}")
-#zašto je geocode endpoint
+
 @app.command("forecast")
 def forecast_cmd(
     city: str = typer.Option(..., "--city", "-c"),
